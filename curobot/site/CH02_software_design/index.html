@@ -1,0 +1,831 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Learning notes and maintenance guide for curobot docs">
+      
+      
+      
+      
+        <link rel="prev" href="../CH01_algorithm_design/">
+      
+      
+        <link rel="next" href="../CH03_perception_pipeline/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>02 软件架构 - curobot Study Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#02-api-cudawarp" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="curobot Study Notes" class="md-header__button md-logo" aria-label="curobot Study Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            curobot Study Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              02 软件架构
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/NVlabs/curobo" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="curobot Study Notes" class="md-nav__button md-logo" aria-label="curobot Study Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    curobot Study Notes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/NVlabs/curobo" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    首页
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CH00_INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    章节索引
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CH01_algorithm_design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 算法设计
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    02 软件架构
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    02 软件架构
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      分层模型
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置与资源
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      类型系统
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      扩展点：自定义代价与优化
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sphinx" class="md-nav__link">
+    <span class="md-ellipsis">
+      与 Sphinx 文档构建
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      延伸阅读
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plantuml" class="md-nav__link">
+    <span class="md-ellipsis">
+      PlantUML 渲染说明
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      本篇术语释义
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CH03_perception_pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03 感知管线
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CH04_motion_control_pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    04 运控管线
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CH05_simulation_visualization_closure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    05 仿真闭环
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CH06_motion_control_computational_walkthrough/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06 运控计算方法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      分层模型
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置与资源
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      类型系统
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      扩展点：自定义代价与优化
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sphinx" class="md-nav__link">
+    <span class="md-ellipsis">
+      与 Sphinx 文档构建
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      延伸阅读
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plantuml" class="md-nav__link">
+    <span class="md-ellipsis">
+      PlantUML 渲染说明
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      本篇术语释义
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!-- SPDX-FileCopyrightText: Copyright (c) 2023-2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved. -->
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+
+<h1 id="02-api-cudawarp">02 — 软件架构：从公开 API 到 CUDA/Warp<a class="headerlink" href="#02-api-cudawarp" title="Permanent link">&para;</a></h1>
+<h2 id="_1">分层模型<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>cuRobo 的安装包名为 <code>nvidia-curobo</code>（见根目录 <a href="https://github.com/NVlabs/curobo/blob/main/pyproject.toml">pyproject.toml</a>）。Python 包根为 <code>curobo/</code>，对学习者最重要的是三层：</p>
+<ol>
+<li><strong>公开 API（稳定入口）</strong>：<code>curobo/*.py</code> 中的薄模块，如 <code>kinematics.py</code>、<code>inverse_kinematics.py</code>、<code>trajectory_optimizer.py</code>、<code>motion_planner.py</code>、<code>model_predictive_control.py</code>、<code>scene.py</code>、<code>perception.py</code>、<code>viewer.py</code> 等。快速导入列表见 <a href="https://github.com/NVlabs/curobo/blob/main/curobo/__init__.py">curobo/<strong>init</strong>.py</a> 的文档字符串。</li>
+<li><strong>实现层</strong>：<code>curobo/_src/</code> — 按领域分子包（<code>robot/</code>、<code>solver/</code>、<code>motion/</code>、<code>geom/</code>、<code>collision/</code>、<code>perception/</code>、<code>rollout/</code>、<code>optim/</code>、<code>curobolib/</code>、<code>types/</code>、<code>util/</code> 等）。阅读源码时<strong>从此处下钻</strong>。</li>
+<li><strong>原生加速</strong>：<code>curobo/_src/curobolib/</code> — CUDA 内核、Warp、<code>cuda.core</code> 后端等；<code>pyproject.toml</code> 中 <code>[tool.setuptools.package-data]</code> 声明了 <code>.cu</code>/<code>.cuh</code> 等资源随包分发。</li>
+</ol>
+<p>```plantuml
+@startuml SoftwareLayers
+skinparam monochrome true
+title cuRobo Python 包分层</p>
+<p>package PublicAPI {
+  [curobo.kinematics] as K
+  [curobo.inverse_kinematics] as IK
+  [curobo.trajectory_optimizer] as TO
+  [curobo.motion_planner] as MP
+  [curobo.model_predictive_control] as MPC
+  [curobo.scene] as SC
+  [curobo.perception] as PE
+  [curobo.viewer] as V
+}</p>
+<p>package Implementation {
+  package _src {
+    [robot] as R
+    [solver] as S
+    [motion] as M
+    [geom_collision] as G
+    [perception_impl] as P
+    [rollout_optim] as O
+  }
+}</p>
+<p>package Native {
+  [curobolib_kernels_warp] as N
+}</p>
+<p>K --&gt; R
+IK --&gt; S
+TO --&gt; S
+MP --&gt; M
+MPC --&gt; S
+SC --&gt; G
+PE --&gt; P
+V --&gt; Implementation</p>
+<p>R --&gt; N
+S --&gt; N
+M --&gt; N
+G --&gt; N
+P --&gt; N
+O --&gt; N</p>
+<p>@enduml
+```</p>
+<h2 id="_2">配置与资源<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>机器人 / 任务 / 场景 YAML</strong>：随包数据在 <a href="https://github.com/NVlabs/curobo/tree/main/curobo/content/configs">curobo/content/configs/</a> 下，常见子目录包括 <code>robot/</code>、<code>task/</code>（如 <code>ik/</code>、<code>trajopt/</code>、<code>mpc/</code>、<code>graph_planner/</code> 等）、<code>scene/</code>。</li>
+<li><strong>解析与 I/O</strong>：<code>curobo.config_io</code> → <code>curobo._src.util.config_io</code>（<code>load_yaml</code>、<code>resolve_config</code> 等）。</li>
+<li><strong>从 URDF 生成配置</strong>：<code>curobo.robot_builder</code>、<code>curobo.robot_parser</code> 对应 <code>_src/robot/builder</code>、<code>parser</code>、<code>loader</code>。</li>
+</ul>
+<p>典型模式（各公开模块文档中均有）：<code>*Cfg.from_robot_yaml_file(...)</code> 或 <code>*Cfg.create(robot="franka.yml", ...)</code>。</p>
+<h2 id="_3">类型系统<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p><code>curobo.types</code> 提供 <code>JointState</code>、<code>Pose</code> 等与 GPU 张量布局一致的核心类型；各求解器接口在公开模块的 docstring 与 Sphinx API 中有说明。</p>
+<h2 id="_4">扩展点：自定义代价与优化<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<ul>
+<li>文档：<a href="https://github.com/NVlabs/curobo/tree/main/docs/guides">Guides</a> — 例如 <a href="https://github.com/NVlabs/curobo/blob/main/docs/guides/custom_optimization.rst">custom optimization</a>。</li>
+<li>示例脚本：<a href="https://github.com/NVlabs/curobo/blob/main/curobo/examples/guides/custom_optimization.py">custom_optimization.py</a>（模块 <code>curobo.examples.guides.custom_optimization</code>）。</li>
+</ul>
+<h2 id="sphinx">与 Sphinx 文档构建<a class="headerlink" href="#sphinx" title="Permanent link">&para;</a></h2>
+<p>官方站点由 <a href="https://github.com/NVlabs/curobo/blob/main/docs/conf.py">docs/conf.py</a> 构建；<code>sphinx-apidoc</code> 生成的 API 在 <code>docs/api/</code>。学习型 README <strong>不</strong>自动进入 Sphinx toctree；若需收录，可在 <code>docs/index.rst</code> 中另行添加链接（本任务默认不改 Sphinx 入口）。</p>
+<h2 id="_5">延伸阅读<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../CH01_algorithm_design/">CH01_algorithm_design.md</a></li>
+<li><a href="https://github.com/NVlabs/curobo/blob/main/docs/concepts/optimization_solver.rst">Optimization solvers</a></li>
+<li><a href="https://github.com/NVlabs/curobo/tree/main/docs/reference">Runtime / reference</a></li>
+</ul>
+<h2 id="plantuml">PlantUML 渲染说明<a class="headerlink" href="#plantuml" title="Permanent link">&para;</a></h2>
+<p>见 <a href="../CH00_INDEX/#plantuml-rendering">CH00_INDEX.md</a>。</p>
+<h2 id="_6">本篇术语释义<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>术语</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>公开 API（稳定入口）</strong></td>
+<td>用户主要导入的 <code>curobo</code> 顶层模块（如 <code>kinematics</code>、<code>motion_planner</code>）；接口相对稳定，文档以这里为准。</td>
+</tr>
+<tr>
+<td><strong>薄封装 / thin wrapper</strong></td>
+<td>顶层 <code>.py</code> 少量代码，把配置与类型转发到 <code>_src</code> 内实现，便于保持用户导入路径清晰。</td>
+</tr>
+<tr>
+<td><strong><code>curobo._src</code></strong></td>
+<td>库的内部实现包；版本迭代时可能有重构，学习源码时从此下钻。</td>
+</tr>
+<tr>
+<td><strong><code>curobolib</code></strong></td>
+<td>承载 CUDA 内核、Warp 与 <code>cuda.core</code> 等原生后端的子树；与 Python 逻辑通过绑定/调用衔接。</td>
+</tr>
+<tr>
+<td><strong>Warp</strong></td>
+<td>NVIDIA 的 Python 可微 GPU 内核/图形语言；cuRobo 中部分几何与感知核依赖 <code>warp-lang</code>。</td>
+</tr>
+<tr>
+<td><strong>CUDA</strong></td>
+<td>NVIDIA GPU 通用并行计算平台；碰撞、距离场等与 GPU 绑定的计算多经此路径加速。</td>
+</tr>
+<tr>
+<td><strong><code>package-data</code> / 包数据</strong></td>
+<td>setuptools 声明的随轮分发非 <code>.py</code> 资源（如 <code>.cu</code>/<code>.cuh</code>）；安装后仍位于包内路径供运行时编译或加载。</td>
+</tr>
+<tr>
+<td><strong>YAML 配置</strong></td>
+<td>人类可读的配置格式；机器人、任务、场景参数常以 <code>.yml</code> 存放在 <code>curobo/content/configs/</code>。</td>
+</tr>
+<tr>
+<td><strong><code>*Cfg</code> 类</strong></td>
+<td>各功能模块的配置对象（如 <code>MotionPlannerCfg</code>），通常提供 <code>from_robot_yaml_file</code> / <code>create</code> 等工厂方法。</td>
+</tr>
+<tr>
+<td><strong><code>curobo.types</code></strong></td>
+<td>关节状态、位姿等与张量布局一致的核心数据类型，在 API 间传递以保证形状与坐标系约定。</td>
+</tr>
+<tr>
+<td><strong><code>config_io</code></strong></td>
+<td>解析、合并、解析路径引用等配置加载辅助模块，减少手写路径错误。</td>
+</tr>
+<tr>
+<td><strong>URDF / robot_builder</strong></td>
+<td>机器人链路描述格式；<code>robot_builder</code> / <code>robot_parser</code> 用于从 URDF 等生成 cuRobo 可用的 YAML 或中间表示。</td>
+</tr>
+<tr>
+<td><strong>Sphinx / <code>sphinx-apidoc</code></strong></td>
+<td>文档工具链；从 Python docstring 生成 API 参考页（本仓库 <code>docs/api/</code>）。</td>
+</tr>
+<tr>
+<td><strong>Optional extra</strong></td>
+<td><code>pyproject.toml</code> 中可选依赖组（如 <code>usd</code>）；按需安装以减少默认环境体积。</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.top", "search.highlight"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

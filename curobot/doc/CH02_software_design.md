@@ -5,9 +5,9 @@
 
 ## 分层模型
 
-cuRobo 的安装包名为 `nvidia-curobo`（见根目录 [pyproject.toml](../../pyproject.toml)）。Python 包根为 `curobo/`，对学习者最重要的是三层：
+cuRobo 的安装包名为 `nvidia-curobo`（见根目录 [pyproject.toml](https://github.com/NVlabs/curobo/blob/main/pyproject.toml)）。Python 包根为 `curobo/`，对学习者最重要的是三层：
 
-1. **公开 API（稳定入口）**：`curobo/*.py` 中的薄模块，如 `kinematics.py`、`inverse_kinematics.py`、`trajectory_optimizer.py`、`motion_planner.py`、`model_predictive_control.py`、`scene.py`、`perception.py`、`viewer.py` 等。快速导入列表见 [curobo/__init__.py](../../curobo/__init__.py) 的文档字符串。
+1. **公开 API（稳定入口）**：`curobo/*.py` 中的薄模块，如 `kinematics.py`、`inverse_kinematics.py`、`trajectory_optimizer.py`、`motion_planner.py`、`model_predictive_control.py`、`scene.py`、`perception.py`、`viewer.py` 等。快速导入列表见 [curobo/__init__.py](https://github.com/NVlabs/curobo/blob/main/curobo/__init__.py) 的文档字符串。
 2. **实现层**：`curobo/_src/` — 按领域分子包（`robot/`、`solver/`、`motion/`、`geom/`、`collision/`、`perception/`、`rollout/`、`optim/`、`curobolib/`、`types/`、`util/` 等）。阅读源码时**从此处下钻**。
 3. **原生加速**：`curobo/_src/curobolib/` — CUDA 内核、Warp、`cuda.core` 后端等；`pyproject.toml` 中 `[tool.setuptools.package-data]` 声明了 `.cu`/`.cuh` 等资源随包分发。
 
@@ -63,7 +63,7 @@ O --> N
 
 ## 配置与资源
 
-- **机器人 / 任务 / 场景 YAML**：随包数据在 [curobo/content/configs/](../../curobo/content/configs/) 下，常见子目录包括 `robot/`、`task/`（如 `ik/`、`trajopt/`、`mpc/`、`graph_planner/` 等）、`scene/`。
+- **机器人 / 任务 / 场景 YAML**：随包数据在 [curobo/content/configs/](https://github.com/NVlabs/curobo/tree/main/curobo/content/configs) 下，常见子目录包括 `robot/`、`task/`（如 `ik/`、`trajopt/`、`mpc/`、`graph_planner/` 等）、`scene/`。
 - **解析与 I/O**：`curobo.config_io` → `curobo._src.util.config_io`（`load_yaml`、`resolve_config` 等）。
 - **从 URDF 生成配置**：`curobo.robot_builder`、`curobo.robot_parser` 对应 `_src/robot/builder`、`parser`、`loader`。
 
@@ -75,22 +75,22 @@ O --> N
 
 ## 扩展点：自定义代价与优化
 
-- 文档：[Guides](../guides/index.rst) — 例如 [custom optimization](../guides/custom_optimization.rst)。
-- 示例脚本：[custom_optimization.py](../../curobo/examples/guides/custom_optimization.py)（模块 `curobo.examples.guides.custom_optimization`）。
+- 文档：[Guides](https://github.com/NVlabs/curobo/tree/main/docs/guides) — 例如 [custom optimization](https://github.com/NVlabs/curobo/blob/main/docs/guides/custom_optimization.rst)。
+- 示例脚本：[custom_optimization.py](https://github.com/NVlabs/curobo/blob/main/curobo/examples/guides/custom_optimization.py)（模块 `curobo.examples.guides.custom_optimization`）。
 
 ## 与 Sphinx 文档构建
 
-官方站点由 [docs/conf.py](../conf.py) 构建；`sphinx-apidoc` 生成的 API 在 `docs/api/`。学习型 README **不**自动进入 Sphinx toctree；若需收录，可在 `docs/index.rst` 中另行添加链接（本任务默认不改 Sphinx 入口）。
+官方站点由 [docs/conf.py](https://github.com/NVlabs/curobo/blob/main/docs/conf.py) 构建；`sphinx-apidoc` 生成的 API 在 `docs/api/`。学习型 README **不**自动进入 Sphinx toctree；若需收录，可在 `docs/index.rst` 中另行添加链接（本任务默认不改 Sphinx 入口）。
 
 ## 延伸阅读
 
-- [README_01_algorithm_design.md](README_01_algorithm_design.md)
-- [Optimization solvers](../concepts/optimization_solver.rst)
-- [Runtime / reference](../reference/index.rst)
+- [CH01_algorithm_design.md](CH01_algorithm_design.md)
+- [Optimization solvers](https://github.com/NVlabs/curobo/blob/main/docs/concepts/optimization_solver.rst)
+- [Runtime / reference](https://github.com/NVlabs/curobo/tree/main/docs/reference)
 
 ## PlantUML 渲染说明
 
-见 [README_00_INDEX.md](README_00_INDEX.md#plantuml-图表如何渲染)。
+见 [CH00_INDEX.md](CH00_INDEX.md#plantuml-rendering)。
 
 ## 本篇术语释义
 

@@ -5,13 +5,13 @@
 
 ## 目标
 
-从 **RGB-D / 深度** 与已知相机位姿出发，构建可用于碰撞/距离查询的世界模型；并可选地对机器人自身成像进行**分割**或基于网格/SDF 的**位姿检测**。公开入口为 [curobo/perception.py](../../curobo/perception.py)。
+从 **RGB-D / 深度** 与已知相机位姿出发，构建可用于碰撞/距离查询的世界模型；并可选地对机器人自身成像进行**分割**或基于网格/SDF 的**位姿检测**。公开入口为 [curobo/perception.py](https://github.com/NVlabs/curobo/blob/main/curobo/perception.py)。
 
 ## 核心数据流（主干）
 
 1. **深度预处理**：`FilterDepth` 对深度图滤波与有效性掩码，减少噪声与无效读数对融合的影响。
 2. **体素融合与距离场**：`Mapper` / `MapperCfg` 将多帧深度融合为 **TSDF** 表示，并按需计算 **ESDF**，供规划器做稠密距离查询。体素教程中描述了 block-sparse 融合、解析几何通道（如立方体）盖章、PBA+ 类 ESDF 计算等（见示例脚本内文档字符串）。
-3. **与规划结合**：融合后的距离查询与 `Scene` 中的解析障碍一起，进入碰撞与轨迹优化管线（见 [README_04_motion_control_pipeline.md](README_04_motion_control_pipeline.md)）。
+3. **与规划结合**：融合后的距离查询与 `Scene` 中的解析障碍一起，进入碰撞与轨迹优化管线（见 [CH04_motion_control_pipeline.md](CH04_motion_control_pipeline.md)）。
 
 ## 可选分支
 
@@ -24,9 +24,9 @@
 
 ## 官方教程与示例
 
-- Sphinx：[Volumetric mapping](../getting-started/volumetric_mapping.rst)
+- Sphinx：[Volumetric mapping](https://github.com/NVlabs/curobo/blob/main/docs/getting-started/volumetric_mapping.rst)
 - 示例模块：`python -m curobo.examples.getting_started.volumetric_mapping`
-- 源文件：[volumetric_mapping.py](../../curobo/examples/getting_started/volumetric_mapping.py)
+- 源文件：[volumetric_mapping.py](https://github.com/NVlabs/curobo/blob/main/curobo/examples/getting_started/volumetric_mapping.py)
 
 ## 感知管线序列图（PlantUML）
 
@@ -91,13 +91,13 @@ package OptionalBranches {
 
 ## 延伸阅读
 
-- [README_01_algorithm_design.md](README_01_algorithm_design.md)（距离场在算法中的角色）
-- [README_02_software_design.md](README_02_software_design.md)（`_src/perception` 位置）
-- 公开 API 文档字符串：[perception.py](../../curobo/perception.py)
+- [CH01_algorithm_design.md](CH01_algorithm_design.md)（距离场在算法中的角色）
+- [CH02_software_design.md](CH02_software_design.md)（`_src/perception` 位置）
+- 公开 API 文档字符串：[perception.py](https://github.com/NVlabs/curobo/blob/main/curobo/perception.py)
 
 ## PlantUML 渲染说明
 
-见 [README_00_INDEX.md](README_00_INDEX.md#plantuml-图表如何渲染)。
+见 [CH00_INDEX.md](CH00_INDEX.md#plantuml-rendering)。
 
 ## 本篇术语释义
 

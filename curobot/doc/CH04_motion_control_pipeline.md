@@ -3,7 +3,7 @@
 
 # 04 — 运控管线：从状态到轨迹与控制
 
-> **与 README_06 的分工**：本文以 **公开 API 表、示例路径与 PlantUML 管线图** 为主。若你希望从 **关节变量、Jacobian、代价函数、Rollout** 等一步步推到同一套 API，请读 [README_06 — 运控计算方法初学者导读](README_06_motion_control_computational_walkthrough.md)。
+> **与 README_06 的分工**：本文以 **公开 API 表、示例路径与 PlantUML 管线图** 为主。若你希望从 **关节变量、Jacobian、代价函数、Rollout** 等一步步推到同一套 API，请读 [README_06 — 运控计算方法初学者导读](CH06_motion_control_computational_walkthrough.md)。
 
 ## 目标
 
@@ -23,18 +23,18 @@
 | 模型预测控制 | `curobo.model_predictive_control` | `ModelPredictiveControl`, `ModelPredictiveControlCfg` |
 | 运动重定向 | `curobo.motion_retargeter` | 见模块说明 |
 
-实现主要分布在 `curobo._src.robot`、`solver`、`motion`、`collision`、`geom` 等（见 [README_02_software_design.md](README_02_software_design.md)）。
+实现主要分布在 `curobo._src.robot`、`solver`、`motion`、`collision`、`geom` 等（见 [CH02_software_design.md](CH02_software_design.md)）。
 
 ## 官方示例（仓库内真实路径）
 
 | 能力 | 运行模块 | 源文件 |
 |------|----------|--------|
-| FK | `curobo.examples.getting_started.forward_kinematics` | [forward_kinematics.py](../../curobo/examples/getting_started/forward_kinematics.py) |
-| IK | `curobo.examples.getting_started.inverse_kinematics` | [inverse_kinematics.py](../../curobo/examples/getting_started/inverse_kinematics.py) |
-| 运动规划 | `curobo.examples.getting_started.motion_planning` | [motion_planning.py](../../curobo/examples/getting_started/motion_planning.py) |
-| MPC | `curobo.examples.getting_started.reactive_control` | [reactive_control.py](../../curobo/examples/getting_started/reactive_control.py) |
-| 人形 + MPC/重定向相关 | `curobo.examples.getting_started.humanoid_retargeting` | [humanoid_retargeting.py](../../curobo/examples/getting_started/humanoid_retargeting.py) |
-| 构型生成 | `curobo.examples.getting_started.build_robot_model` | [build_robot_model.py](../../curobo/examples/getting_started/build_robot_model.py) |
+| FK | `curobo.examples.getting_started.forward_kinematics` | [forward_kinematics.py](https://github.com/NVlabs/curobo/blob/main/curobo/examples/getting_started/forward_kinematics.py) |
+| IK | `curobo.examples.getting_started.inverse_kinematics` | [inverse_kinematics.py](https://github.com/NVlabs/curobo/blob/main/curobo/examples/getting_started/inverse_kinematics.py) |
+| 运动规划 | `curobo.examples.getting_started.motion_planning` | [motion_planning.py](https://github.com/NVlabs/curobo/blob/main/curobo/examples/getting_started/motion_planning.py) |
+| MPC | `curobo.examples.getting_started.reactive_control` | [reactive_control.py](https://github.com/NVlabs/curobo/blob/main/curobo/examples/getting_started/reactive_control.py) |
+| 人形 + MPC/重定向相关 | `curobo.examples.getting_started.humanoid_retargeting` | [humanoid_retargeting.py](https://github.com/NVlabs/curobo/blob/main/curobo/examples/getting_started/humanoid_retargeting.py) |
+| 构型生成 | `curobo.examples.getting_started.build_robot_model` | [build_robot_model.py](https://github.com/NVlabs/curobo/blob/main/curobo/examples/getting_started/build_robot_model.py) |
 
 ## 运控活动图（PlantUML）
 
@@ -95,14 +95,14 @@ MP --> User : result
 
 ## 延伸阅读
 
-- [README_01_algorithm_design.md](README_01_algorithm_design.md)
-- [README_03_perception_pipeline.md](README_03_perception_pipeline.md)
-- [Getting started: motion planning](../getting-started/motion_planning.rst)
-- [Concepts: graph planner](../concepts/graph_planner.rst)
+- [CH01_algorithm_design.md](CH01_algorithm_design.md)
+- [CH03_perception_pipeline.md](CH03_perception_pipeline.md)
+- [Getting started: motion planning](https://github.com/NVlabs/curobo/blob/main/docs/getting-started/motion_planning.rst)
+- [Concepts: graph planner](https://github.com/NVlabs/curobo/blob/main/docs/concepts/graph_planner.rst)
 
 ## PlantUML 渲染说明
 
-见 [README_00_INDEX.md](README_00_INDEX.md#plantuml-图表如何渲染)。
+见 [CH00_INDEX.md](CH00_INDEX.md#plantuml-rendering)。
 
 ## 本篇术语释义
 

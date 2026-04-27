@@ -12,7 +12,7 @@ cuRobo **不是**完整的物理仿真器仓库：不包含类似「一键启动
 3. 将 **轨迹或低级指令** 回灌到仿真器或控制器；
 4. 使用 **Viser / USD** 等做调试可视化或离线回放。
 
-若使用 **Isaac Sim / Omniverse**，通常通过 **USD** 轨迹导出或自建桥接节点完成「看与控」；`UsdWriter` 的说明中提到了与 OpenUSD 兼容查看器及 Isaac Sim 的兼容性（见 [viewer.py](../../curobo/viewer.py) docstring）。
+若使用 **Isaac Sim / Omniverse**，通常通过 **USD** 轨迹导出或自建桥接节点完成「看与控」；`UsdWriter` 的说明中提到了与 OpenUSD 兼容查看器及 Isaac Sim 的兼容性（见 [viewer.py](https://github.com/NVlabs/curobo/blob/main/curobo/viewer.py) docstring）。
 
 ## 可视化：Viser 与 USD
 
@@ -21,7 +21,7 @@ cuRobo **不是**完整的物理仿真器仓库：不包含类似「一键启动
 | `ViserVisualizer` | 浏览器内交互 3D，可调控制框架 | `curobo.viewer`（懒加载 `viser`） |
 | `UsdWriter` | 将关节轨迹写到 USD 文件，便于 `usdview` 或 Isaac Sim | `curobo.viewer`（可选依赖 `usd-core`） |
 
-安装提示见 [pyproject.toml](../../pyproject.toml) 的 `usd` optional extra 与 `viewer.py` 中的 `ImportError` 说明。
+安装提示见 [pyproject.toml](https://github.com/NVlabs/curobo/blob/main/pyproject.toml) 的 `usd` optional extra 与 `viewer.py` 中的 `ImportError` 说明。
 
 ## 闭环序列图（PlantUML）
 
@@ -51,9 +51,9 @@ end
 
 ## 与学习型文档其它章节的关系
 
-- 世界模型来自 [README_03_perception_pipeline.md](README_03_perception_pipeline.md) 或解析 `Scene`。
-- 规划算法见 [README_01_algorithm_design.md](README_01_algorithm_design.md)；模块边界见 [README_02_software_design.md](README_02_software_design.md)。
-- 运控 API 见 [README_04_motion_control_pipeline.md](README_04_motion_control_pipeline.md)。
+- 世界模型来自 [CH03_perception_pipeline.md](CH03_perception_pipeline.md) 或解析 `Scene`。
+- 规划算法见 [CH01_algorithm_design.md](CH01_algorithm_design.md)；模块边界见 [CH02_software_design.md](CH02_software_design.md)。
+- 运控 API 见 [CH04_motion_control_pipeline.md](CH04_motion_control_pipeline.md)。
 
 ## 仓库内可直接运行的示例（用于「离线闭环心智模型」）
 
@@ -61,25 +61,25 @@ end
 
 | 场景 | 模块 | 源文件 |
 |------|------|--------|
-| MPC 跟踪 | `curobo.examples.getting_started.reactive_control` | [reactive_control.py](../../curobo/examples/getting_started/reactive_control.py) |
-| 运动规划 | `curobo.examples.getting_started.motion_planning` | [motion_planning.py](../../curobo/examples/getting_started/motion_planning.py) |
-| 体素 + 规划教程 | `curobo.examples.getting_started.volumetric_mapping` | [volumetric_mapping.py](../../curobo/examples/getting_started/volumetric_mapping.py) |
-| 人形示例 | `curobo.examples.getting_started.humanoid_retargeting` | [humanoid_retargeting.py](../../curobo/examples/getting_started/humanoid_retargeting.py) |
-| 自定义优化 / 代价 | `curobo.examples.guides.custom_optimization` | [custom_optimization.py](../../curobo/examples/guides/custom_optimization.py) |
-| 球拟合 / 几何参考 | `curobo.examples.reference.sphere_fit_comparison` | [sphere_fit_comparison.py](../../curobo/examples/reference/sphere_fit_comparison.py) |
-| 位姿标定参考 | `curobo.examples.reference.robot_pose_calibration` | [robot_pose_calibration.py](../../curobo/examples/reference/robot_pose_calibration.py) |
+| MPC 跟踪 | `curobo.examples.getting_started.reactive_control` | [reactive_control.py](https://github.com/NVlabs/curobo/blob/main/curobo/examples/getting_started/reactive_control.py) |
+| 运动规划 | `curobo.examples.getting_started.motion_planning` | [motion_planning.py](https://github.com/NVlabs/curobo/blob/main/curobo/examples/getting_started/motion_planning.py) |
+| 体素 + 规划教程 | `curobo.examples.getting_started.volumetric_mapping` | [volumetric_mapping.py](https://github.com/NVlabs/curobo/blob/main/curobo/examples/getting_started/volumetric_mapping.py) |
+| 人形示例 | `curobo.examples.getting_started.humanoid_retargeting` | [humanoid_retargeting.py](https://github.com/NVlabs/curobo/blob/main/curobo/examples/getting_started/humanoid_retargeting.py) |
+| 自定义优化 / 代价 | `curobo.examples.guides.custom_optimization` | [custom_optimization.py](https://github.com/NVlabs/curobo/blob/main/curobo/examples/guides/custom_optimization.py) |
+| 球拟合 / 几何参考 | `curobo.examples.reference.sphere_fit_comparison` | [sphere_fit_comparison.py](https://github.com/NVlabs/curobo/blob/main/curobo/examples/reference/sphere_fit_comparison.py) |
+| 位姿标定参考 | `curobo.examples.reference.robot_pose_calibration` | [robot_pose_calibration.py](https://github.com/NVlabs/curobo/blob/main/curobo/examples/reference/robot_pose_calibration.py) |
 
 在应用侧接入 **Isaac Sim / MuJoCo / Gazebo** 时，建议自行维护一张「数据类型对照表」：`JointState` 字段、控制周期、坐标系（世界/基座/相机）与 `Scene` 更新频率；本仓库以库 API 为主，不在此固定某一仿真器的 ROS 话题名。
 
 ## 延伸阅读
 
-- [Getting started index](../getting-started/index.rst)
-- [README_00_INDEX.md](README_00_INDEX.md) 中的示例一览表
+- [Getting started index](https://github.com/NVlabs/curobo/tree/main/docs/getting-started)
+- [CH00_INDEX.md](CH00_INDEX.md) 中的示例一览表
 - 官方站点：[nvlabs.github.io/curobo](https://nvlabs.github.io/curobo)
 
 ## PlantUML 渲染说明
 
-见 [README_00_INDEX.md](README_00_INDEX.md#plantuml-图表如何渲染)。
+见 [CH00_INDEX.md](CH00_INDEX.md#plantuml-rendering)。
 
 ## 本篇术语释义
 
