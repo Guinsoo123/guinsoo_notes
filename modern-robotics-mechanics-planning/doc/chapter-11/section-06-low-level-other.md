@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `current loop`
-- `torque loop`
-- `implementation issues`
+- `current loop（电流环）`
+- `torque loop（力矩环）`
+- `implementation issues（实现问题）`
 
 ## 一句话定义
 
-- `current loop`：执行器底层电流闭环。
-- `torque loop`：关节力矩内环控制。
-- `implementation issues`：采样、延迟、饱和等工程因素。
+- `current loop（电流环）`：执行器底层电流闭环。
+- `torque loop（力矩环）`：关节力矩内环控制。
+- `implementation issues（实现问题）`：采样、延迟、饱和等工程因素。
 
 ## 关键关系/公式（记忆版）
 

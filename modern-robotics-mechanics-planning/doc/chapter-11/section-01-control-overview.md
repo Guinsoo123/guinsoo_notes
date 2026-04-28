@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `reference`
-- `feedback`
-- `stability`
+- `reference（参考信号）`
+- `feedback（反馈）`
+- `stability（稳定性）`
 
 ## 一句话定义
 
-- `reference`：期望轨迹或目标信号。
-- `feedback`：利用测量误差实时修正控制输入。
-- `stability`：系统在扰动后回到平衡的能力。
+- `reference（参考信号）`：期望轨迹或目标信号。
+- `feedback（反馈）`：利用测量误差实时修正控制输入。
+- `stability（稳定性）`：系统在扰动后回到平衡的能力。
 
 ## 关键关系/公式（记忆版）
 

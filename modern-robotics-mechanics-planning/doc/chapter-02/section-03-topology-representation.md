@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `configuration space`
-- `topology`
-- `parameterization`
+- `configuration space（构型空间）`
+- `topology（拓扑）`
+- `parameterization（参数化）`
 
 ## 一句话定义
 
-- `configuration space`：机器人全部可能构型构成的空间。
-- `topology`：描述空间连通性与孔洞等全局结构。
-- `parameterization`：用坐标变量表示构型空间点的方法。
+- `configuration space（构型空间）`：机器人全部可能构型构成的空间。
+- `topology（拓扑）`：描述空间连通性与孔洞等全局结构。
+- `parameterization（参数化）`：用坐标变量表示构型空间点的方法。
 
 ## 关键关系/公式（记忆版）
 

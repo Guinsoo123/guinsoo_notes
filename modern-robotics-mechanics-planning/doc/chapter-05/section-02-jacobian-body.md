@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `body Jacobian`
-- `frame transform`
-- `Adjoint`
+- `body Jacobian（本体雅可比）`
+- `frame transform（坐标系变换）`
+- `Adjoint（伴随变换）`
 
 ## 一句话定义
 
-- `body Jacobian`：在本体坐标系下表达的雅可比。
-- `frame transform`：同一物理量在不同坐标系间的变换。
-- `Adjoint`：用于变换twist和wrench的伴随矩阵。
+- `body Jacobian（本体雅可比）`：在本体坐标系下表达的雅可比。
+- `frame transform（坐标系变换）`：同一物理量在不同坐标系间的变换。
+- `Adjoint（伴随变换）`：用于变换twist和wrench的伴随矩阵。
 
 ## 关键关系/公式（记忆版）
 

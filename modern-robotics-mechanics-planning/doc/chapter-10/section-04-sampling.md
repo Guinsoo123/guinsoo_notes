@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `RRT`
-- `PRM`
-- `probabilistic completeness`
+- `RRT（快速随机树）`
+- `PRM（概率路图）`
+- `probabilistic completeness（概率完备性）`
 
 ## 一句话定义
 
-- `RRT`：快速随机树，偏探索性强。
-- `PRM`：先采样建图后查询的概率路图法。
-- `probabilistic completeness`：采样数趋大时找到解概率趋近1。
+- `RRT（快速随机树）`：快速随机树，偏探索性强。
+- `PRM（概率路图）`：先采样建图后查询的概率路图法。
+- `probabilistic completeness（概率完备性）`：采样数趋大时找到解概率趋近1。
 
 ## 关键关系/公式（记忆版）
 

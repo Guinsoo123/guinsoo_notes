@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `product of exponentials`
-- `space frame`
-- `screw axis`
+- `product of exponentials（指数积公式）`
+- `space frame（空间坐标系）`
+- `screw axis（螺旋轴）`
 
 ## 一句话定义
 
-- `product of exponentials`：串联机构位姿由多个关节指数映射相乘得到。
-- `space frame`：固定在基座上的参考坐标系。
-- `screw axis`：同时描述旋转轴和沿轴平移特性的轴线。
+- `product of exponentials（指数积公式）`：串联机构位姿由多个关节指数映射相乘得到。
+- `space frame（空间坐标系）`：固定在基座上的参考坐标系。
+- `screw axis（螺旋轴）`：同时描述旋转轴和沿轴平移特性的轴线。
 
 ## 关键关系/公式（记忆版）
 

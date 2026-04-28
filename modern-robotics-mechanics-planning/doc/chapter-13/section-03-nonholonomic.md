@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `nonholonomic`
-- `Pfaffian constraint`
-- `controllability`
+- `nonholonomic（非完整约束）`
+- `Pfaffian constraint（Pfaff约束）`
+- `controllability（可控性）`
 
 ## 一句话定义
 
-- `nonholonomic`：仅体现为速度约束且一般不可积分为位置约束。
-- `Pfaffian constraint`：线性速度约束形式 A(q)q_dot=0。
-- `controllability`：系统是否可由输入到达目标状态。
+- `nonholonomic（非完整约束）`：仅体现为速度约束且一般不可积分为位置约束。
+- `Pfaffian constraint（Pfaff约束）`：线性速度约束形式 A(q)q_dot=0。
+- `controllability（可控性）`：系统是否可由输入到达目标状态。
 
 ## 关键关系/公式（记忆版）
 

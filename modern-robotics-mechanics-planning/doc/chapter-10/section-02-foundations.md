@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `C-space obstacles`
-- `collision detection`
-- `graph search`
+- `C-space obstacles（构型空间障碍）`
+- `collision detection（碰撞检测）`
+- `graph search（图搜索）`
 
 ## 一句话定义
 
-- `C-space obstacles`：障碍物在构型空间中的映射区域。
-- `collision detection`：判断构型或路径是否与障碍相交。
-- `graph search`：在离散图中寻找代价最小或可行路径。
+- `C-space obstacles（构型空间障碍）`：障碍物在构型空间中的映射区域。
+- `collision detection（碰撞检测）`：判断构型或路径是否与障碍相交。
+- `graph search（图搜索）`：在离散图中寻找代价最小或可行路径。
 
 ## 关键关系/公式（记忆版）
 

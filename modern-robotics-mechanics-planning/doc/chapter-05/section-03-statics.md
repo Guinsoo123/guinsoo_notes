@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `statics`
-- `joint torque`
-- `wrench mapping`
+- `statics（静力学）`
+- `joint torque（关节力矩）`
+- `wrench mapping（力旋量映射）`
 
 ## 一句话定义
 
-- `statics`：研究平衡状态下力与力矩关系。
-- `joint torque`：关节驱动器输出的力矩。
-- `wrench mapping`：末端受力映射到关节力矩的关系。
+- `statics（静力学）`：研究平衡状态下力与力矩关系。
+- `joint torque（关节力矩）`：关节驱动器输出的力矩。
+- `wrench mapping（力旋量映射）`：末端受力映射到关节力矩的关系。
 
 ## 关键关系/公式（记忆版）
 

@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `recursive algorithm`
-- `inverse dynamics`
-- `joint torque`
+- `recursive algorithm（递归算法）`
+- `inverse dynamics（逆动力学）`
+- `joint torque（关节力矩）`
 
 ## 一句话定义
 
-- `recursive algorithm`：沿机构链前后递推的高效计算结构。
-- `inverse dynamics`：由运动求驱动力矩的问题。
-- `joint torque`：关节驱动器输出的力矩。
+- `recursive algorithm（递归算法）`：沿机构链前后递推的高效计算结构。
+- `inverse dynamics（逆动力学）`：由运动求驱动力矩的问题。
+- `joint torque（关节力矩）`：关节驱动器输出的力矩。
 
 ## 关键关系/公式（记忆版）
 

@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `mobile manipulation`
-- `whole-body control`
-- `coordination`
+- `mobile manipulation（移动操作）`
+- `whole-body control（全身控制）`
+- `coordination（协同控制）`
 
 ## 一句话定义
 
-- `mobile manipulation`：移动底盘与机械臂协同操作。
-- `whole-body control`：统一优化底盘与机械臂自由度。
-- `coordination`：多子系统在时空约束下协同动作。
+- `mobile manipulation（移动操作）`：移动底盘与机械臂协同操作。
+- `whole-body control（全身控制）`：统一优化底盘与机械臂自由度。
+- `coordination（协同控制）`：多子系统在时空约束下协同动作。
 
 ## 关键关系/公式（记忆版）
 

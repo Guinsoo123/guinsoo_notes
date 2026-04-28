@@ -1,0 +1,127 @@
+site_name: Modern Robotics Study Notes
+site_description: 术语导向的 Modern Robotics 中文学习资料
+docs_dir: doc
+site_dir: site
+
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - 首页: index.md
+  - 全书总览: overview.md
+  - 全书术语总表: glossary/README.md
+  - 章节目录:
+      - chapter-01 Preview（全书预览）:
+          - 章节总览: chapter-01/README.md
+          - 术语速查: chapter-01/terms.md
+          - 机器人学全景与学习路径: chapter-01/section-01-overview.md
+      - chapter-02 Configuration Space（构型空间）:
+          - 章节总览: chapter-02/README.md
+          - 术语速查: chapter-02/terms.md
+          - 刚体自由度: chapter-02/section-01-rigid-body-dof.md
+          - 机器人自由度与关节: chapter-02/section-02-robot-dof.md
+          - 构型空间拓扑与表示: chapter-02/section-03-topology-representation.md
+          - 构型与速度约束: chapter-02/section-04-constraints.md
+          - 任务空间与工作空间: chapter-02/section-05-task-workspace.md
+      - chapter-03 Rigid-Body Motions（刚体运动）:
+          - 章节总览: chapter-03/README.md
+          - 术语速查: chapter-03/terms.md
+          - 平面刚体运动: chapter-03/section-01-planar-motions.md
+          - 旋转与角速度: chapter-03/section-02-rotations-angular-vel.md
+          - 齐次变换与Twist: chapter-03/section-03-homogeneous-twists.md
+          - 指数坐标表示: chapter-03/section-04-exponential-coordinates.md
+          - Wrench 与力学表示: chapter-03/section-05-wrenches.md
+      - chapter-04 Forward Kinematics（正向运动学）:
+          - 章节总览: chapter-04/README.md
+          - 术语速查: chapter-04/terms.md
+          - PoE 公式（空间坐标）: chapter-04/section-01-poe-space.md
+          - PoE 公式（本体坐标）: chapter-04/section-02-poe-body.md
+          - URDF 与模型描述: chapter-04/section-03-urdf.md
+      - chapter-05 Velocity Kinematics and Statics（速度运动学与静力学）:
+          - 章节总览: chapter-05/README.md
+          - 术语速查: chapter-05/terms.md
+          - 空间雅可比: chapter-05/section-01-jacobian-space.md
+          - 本体雅可比: chapter-05/section-02-jacobian-body.md
+          - 开链机构静力学: chapter-05/section-03-statics.md
+          - 奇异性分析: chapter-05/section-04-singularity.md
+          - 可操作度: chapter-05/section-05-manipulability.md
+      - chapter-06 Inverse Kinematics（逆运动学）:
+          - 章节总览: chapter-06/README.md
+          - 术语速查: chapter-06/terms.md
+          - 解析逆解: chapter-06/section-01-analytic-ik.md
+          - 数值逆解: chapter-06/section-02-numerical-ik.md
+          - 逆速度运动学: chapter-06/section-03-inverse-velocity.md
+          - 闭环机构逆解注记: chapter-06/section-04-closed-loop-note.md
+      - chapter-07 Kinematics of Closed Chains（闭链机构运动学）:
+          - 章节总览: chapter-07/README.md
+          - 术语速查: chapter-07/terms.md
+          - 并联机构正逆运动学: chapter-07/section-01-parallel-ik-fk.md
+          - 微分运动学: chapter-07/section-02-differential-kinematics.md
+          - 闭链奇异性: chapter-07/section-03-singularity.md
+      - chapter-08 Dynamics of Open Chains（开链动力学）:
+          - 章节总览: chapter-08/README.md
+          - 术语速查: chapter-08/terms.md
+          - 拉格朗日建模: chapter-08/section-01-lagrangian.md
+          - 单刚体动力学: chapter-08/section-02-single-body-dynamics.md
+          - Newton-Euler逆动力学: chapter-08/section-03-ne-inverse-dynamics.md
+          - 闭式动力学方程: chapter-08/section-04-closed-form-dynamics.md
+          - 正动力学: chapter-08/section-05-forward-dynamics.md
+          - 任务空间动力学: chapter-08/section-06-task-space-dynamics.md
+          - 受约束动力学: chapter-08/section-07-constrained-dynamics.md
+          - 执行器与摩擦: chapter-08/section-08-actuation-friction.md
+      - chapter-09 Trajectory Generation（轨迹生成）:
+          - 章节总览: chapter-09/README.md
+          - 术语速查: chapter-09/terms.md
+          - 轨迹与路径定义: chapter-09/section-01-definitions.md
+          - 点到点轨迹: chapter-09/section-02-point-to-point.md
+          - 经由点多项式轨迹: chapter-09/section-03-via-point.md
+          - 最优时间缩放: chapter-09/section-04-time-optimal-scaling.md
+      - chapter-10 Motion Planning（运动规划）:
+          - 章节总览: chapter-10/README.md
+          - 术语速查: chapter-10/terms.md
+          - 运动规划总览: chapter-10/section-01-overview.md
+          - 规划基础: chapter-10/section-02-foundations.md
+          - 完备方法与栅格方法: chapter-10/section-03-complete-grid.md
+          - 采样规划: chapter-10/section-04-sampling.md
+          - 势场与优化: chapter-10/section-05-potential-optimization.md
+          - 轨迹平滑: chapter-10/section-06-smoothing.md
+      - chapter-11 Robot Control（机器人控制）:
+          - 章节总览: chapter-11/README.md
+          - 术语速查: chapter-11/terms.md
+          - 控制系统概览: chapter-11/section-01-control-overview.md
+          - 误差动力学: chapter-11/section-02-error-dynamics.md
+          - 速度输入控制: chapter-11/section-03-velocity-input-control.md
+          - 力矩输入控制: chapter-11/section-04-torque-input-control.md
+          - 力控制/混合控制/阻抗控制: chapter-11/section-05-force-hybrid-impedance.md
+          - 底层控制与其他主题: chapter-11/section-06-low-level-other.md
+      - chapter-12 Grasping and Manipulation（抓取与操作）:
+          - 章节总览: chapter-12/README.md
+          - 术语速查: chapter-12/terms.md
+          - 接触运动学: chapter-12/section-01-contact-kinematics.md
+          - 接触力与摩擦: chapter-12/section-02-contact-force-friction.md
+          - 操作策略: chapter-12/section-03-manipulation.md
+      - chapter-13 Wheeled Mobile Robots（轮式移动机器人）:
+          - 章节总览: chapter-13/README.md
+          - 术语速查: chapter-13/terms.md
+          - 轮式机器人类型: chapter-13/section-01-types.md
+          - 全向轮机器人: chapter-13/section-02-omni.md
+          - 非完整约束移动机器人: chapter-13/section-03-nonholonomic.md
+          - 里程计: chapter-13/section-04-odometry.md
+          - 移动操作: chapter-13/section-05-mobile-manipulation.md

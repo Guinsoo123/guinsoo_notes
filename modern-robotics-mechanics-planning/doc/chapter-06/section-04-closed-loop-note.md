@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `closed chain`
-- `constraint equation`
-- `consistency`
+- `closed chain（闭链）`
+- `constraint equation（约束方程）`
+- `consistency（一致性）`
 
 ## 一句话定义
 
-- `closed chain`：存在回路约束的机构拓扑。
-- `constraint equation`：刻画机构回路一致性的方程。
-- `consistency`：多个约束同时可满足的可行性。
+- `closed chain（闭链）`：存在回路约束的机构拓扑。
+- `constraint equation（约束方程）`：刻画机构回路一致性的方程。
+- `consistency（一致性）`：多个约束同时可满足的可行性。
 
 ## 关键关系/公式（记忆版）
 

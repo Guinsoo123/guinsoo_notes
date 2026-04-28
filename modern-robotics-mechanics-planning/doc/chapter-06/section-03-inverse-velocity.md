@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `pseudoinverse`
-- `damped least squares`
-- `redundancy`
+- `pseudoinverse（伪逆）`
+- `damped least squares（阻尼最小二乘）`
+- `redundancy（冗余）`
 
 ## 一句话定义
 
-- `pseudoinverse`：对非方阵或奇异矩阵求最小二乘逆的算子。
-- `damped least squares`：加阻尼提高奇异附近逆解稳定性的方案。
-- `redundancy`：自由度高于任务维度导致解不唯一。
+- `pseudoinverse（伪逆）`：对非方阵或奇异矩阵求最小二乘逆的算子。
+- `damped least squares（阻尼最小二乘）`：加阻尼提高奇异附近逆解稳定性的方案。
+- `redundancy（冗余）`：自由度高于任务维度导致解不唯一。
 
 ## 关键关系/公式（记忆版）
 

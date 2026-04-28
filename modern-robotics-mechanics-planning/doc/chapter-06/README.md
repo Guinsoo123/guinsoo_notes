@@ -14,11 +14,11 @@
 
 ## 本章最重要 5 个术语
 
-- `inverse kinematics`：本章关键概念。
-- `analytic IK`：通过代数消元得到闭式逆解的方法。
-- `iterative IK`：通过迭代逐步逼近目标位姿的逆解法。
-- `pseudoinverse`：对非方阵或奇异矩阵求最小二乘逆的算子。
-- `redundancy`：自由度高于任务维度导致解不唯一。
+- `inverse kinematics（逆运动学）`：本章关键概念。
+- `analytic IK（解析逆运动学）`：通过代数消元得到闭式逆解的方法。
+- `iterative IK（迭代逆运动学）`：通过迭代逐步逼近目标位姿的逆解法。
+- `pseudoinverse（伪逆）`：对非方阵或奇异矩阵求最小二乘逆的算子。
+- `redundancy（冗余）`：自由度高于任务维度导致解不唯一。
 
 ## 本章易错点
 

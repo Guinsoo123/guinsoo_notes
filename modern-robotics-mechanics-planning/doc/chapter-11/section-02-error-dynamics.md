@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `error dynamics`
-- `eigenvalue`
-- `settling time`
+- `error dynamics（误差动力学）`
+- `eigenvalue（特征值）`
+- `settling time（调节时间）`
 
 ## 一句话定义
 
-- `error dynamics`：误差随时间演化的动力学方程。
-- `eigenvalue`：线性系统稳定性与响应速度关键参数。
-- `settling time`：误差进入并保持在容许带内所需时间。
+- `error dynamics（误差动力学）`：误差随时间演化的动力学方程。
+- `eigenvalue（特征值）`：线性系统稳定性与响应速度关键参数。
+- `settling time（调节时间）`：误差进入并保持在容许带内所需时间。
 
 ## 关键关系/公式（记忆版）
 

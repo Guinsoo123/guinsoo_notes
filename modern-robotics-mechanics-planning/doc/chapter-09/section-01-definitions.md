@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `trajectory`
-- `path`
-- `time scaling`
+- `trajectory（轨迹）`
+- `path（路径）`
+- `time scaling（时间标定）`
 
 ## 一句话定义
 
-- `trajectory`：随时间参数化的状态曲线。
-- `path`：仅含几何形状、不含时间信息的曲线。
-- `time scaling`：将几何路径映射为可执行时间轨迹。
+- `trajectory（轨迹）`：随时间参数化的状态曲线。
+- `path（路径）`：仅含几何形状、不含时间信息的曲线。
+- `time scaling（时间标定）`：将几何路径映射为可执行时间轨迹。
 
 ## 关键关系/公式（记忆版）
 

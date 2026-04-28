@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `analytic IK`
-- `closed-form solution`
-- `solution branches`
+- `analytic IK（解析逆运动学）`
+- `closed-form solution（闭式解）`
+- `solution branches（解分支）`
 
 ## 一句话定义
 
-- `analytic IK`：通过代数消元得到闭式逆解的方法。
-- `closed-form solution`：有限步公式可直接计算的解。
-- `solution branches`：逆解的多组离散分支。
+- `analytic IK（解析逆运动学）`：通过代数消元得到闭式逆解的方法。
+- `closed-form solution（闭式解）`：有限步公式可直接计算的解。
+- `solution branches（解分支）`：逆解的多组离散分支。
 
 ## 关键关系/公式（记忆版）
 

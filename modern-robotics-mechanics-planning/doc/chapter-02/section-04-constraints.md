@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `holonomic`
-- `nonholonomic`
-- `constraint`
+- `holonomic（完整约束）`
+- `nonholonomic（非完整约束）`
+- `constraint（约束）`
 
 ## 一句话定义
 
-- `holonomic`：可积分为位置约束的约束类型。
-- `nonholonomic`：仅体现为速度约束且一般不可积分为位置约束。
-- `constraint`：限制系统可行状态或速度的关系式。
+- `holonomic（完整约束）`：可积分为位置约束的约束类型。
+- `nonholonomic（非完整约束）`：仅体现为速度约束且一般不可积分为位置约束。
+- `constraint（约束）`：限制系统可行状态或速度的关系式。
 
 ## 关键关系/公式（记忆版）
 

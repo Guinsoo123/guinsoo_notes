@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `manipulability`
-- `ellipsoid`
-- `conditioning`
+- `manipulability（可操作度）`
+- `ellipsoid（椭球指标）`
+- `conditioning（条件数特性）`
 
 ## 一句话定义
 
-- `manipulability`：末端速度或力可实现能力的几何度量。
-- `ellipsoid`：雅可比诱导的可达速度/力方向椭球。
-- `conditioning`：描述数值稳定性与方向均衡性的指标。
+- `manipulability（可操作度）`：末端速度或力可实现能力的几何度量。
+- `ellipsoid（椭球指标）`：雅可比诱导的可达速度/力方向椭球。
+- `conditioning（条件数特性）`：描述数值稳定性与方向均衡性的指标。
 
 ## 关键关系/公式（记忆版）
 

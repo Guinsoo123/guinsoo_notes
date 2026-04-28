@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `DC motor`
-- `gear ratio`
-- `friction model`
+- `DC motor（直流电机）`
+- `gear ratio（齿轮比）`
+- `friction model（摩擦模型）`
 
 ## 一句话定义
 
-- `DC motor`：以直流电机为代表的常见驱动器。
-- `gear ratio`：电机与关节侧速度/力矩传动比。
-- `friction model`：描述粘滞、库伦等摩擦效应的模型。
+- `DC motor（直流电机）`：以直流电机为代表的常见驱动器。
+- `gear ratio（齿轮比）`：电机与关节侧速度/力矩传动比。
+- `friction model（摩擦模型）`：描述粘滞、库伦等摩擦效应的模型。
 
 ## 关键关系/公式（记忆版）
 

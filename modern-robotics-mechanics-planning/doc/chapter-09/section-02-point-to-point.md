@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `straight-line path`
-- `quintic`
-- `trapezoidal profile`
+- `straight-line path（直线路径）`
+- `quintic（五次多项式）`
+- `trapezoidal profile（梯形速度曲线）`
 
 ## 一句话定义
 
-- `straight-line path`：在选定空间按线段连接起终点。
-- `quintic`：满足平滑边界条件的五次多项式时间标定。
-- `trapezoidal profile`：加速-匀速-减速的速度曲线。
+- `straight-line path（直线路径）`：在选定空间按线段连接起终点。
+- `quintic（五次多项式）`：满足平滑边界条件的五次多项式时间标定。
+- `trapezoidal profile（梯形速度曲线）`：加速-匀速-减速的速度曲线。
 
 ## 关键关系/公式（记忆版）
 

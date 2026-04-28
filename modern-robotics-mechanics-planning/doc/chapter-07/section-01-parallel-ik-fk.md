@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `parallel mechanism`
-- `Stewart platform`
-- `constraint loop`
+- `parallel mechanism（并联机构）`
+- `Stewart platform（Stewart平台）`
+- `constraint loop（约束回路）`
 
 ## 一句话定义
 
-- `parallel mechanism`：多个支链并联支撑同一动平台的机构。
-- `Stewart platform`：典型6自由度并联平台机构。
-- `constraint loop`：闭链中由几何关系形成的回路约束。
+- `parallel mechanism（并联机构）`：多个支链并联支撑同一动平台的机构。
+- `Stewart platform（Stewart平台）`：典型6自由度并联平台机构。
+- `constraint loop（约束回路）`：闭链中由几何关系形成的回路约束。
 
 ## 关键关系/公式（记忆版）
 

@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `parallel singularity`
-- `serial singularity`
-- `constraint loss`
+- `parallel singularity（并联奇异）`
+- `serial singularity（串联奇异）`
+- `constraint loss（约束退化）`
 
 ## 一句话定义
 
-- `parallel singularity`：并联机构失去抗载或控制能力的奇异。
-- `serial singularity`：支链局部运动能力退化导致的奇异。
-- `constraint loss`：约束独立性下降引起自由度突变。
+- `parallel singularity（并联奇异）`：并联机构失去抗载或控制能力的奇异。
+- `serial singularity（串联奇异）`：支链局部运动能力退化导致的奇异。
+- `constraint loss（约束退化）`：约束独立性下降引起自由度突变。
 
 ## 关键关系/公式（记忆版）
 

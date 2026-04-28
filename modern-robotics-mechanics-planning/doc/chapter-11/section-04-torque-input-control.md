@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `computed torque`
-- `PD+gravity`
-- `inverse dynamics control`
+- `computed torque（计算力矩控制）`
+- `PD+gravity（PD加重力补偿）`
+- `inverse dynamics control（逆动力学控制）`
 
 ## 一句话定义
 
-- `computed torque`：用动力学前馈补偿的轨迹跟踪控制。
-- `PD+gravity`：PD反馈加重力补偿的经典结构。
-- `inverse dynamics control`：把非线性系统线性化的控制方法。
+- `computed torque（计算力矩控制）`：用动力学前馈补偿的轨迹跟踪控制。
+- `PD+gravity（PD加重力补偿）`：PD反馈加重力补偿的经典结构。
+- `inverse dynamics control（逆动力学控制）`：把非线性系统线性化的控制方法。
 
 ## 关键关系/公式（记忆版）
 

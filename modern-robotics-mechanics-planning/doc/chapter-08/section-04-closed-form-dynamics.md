@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `mass matrix`
-- `Coriolis`
-- `gravity vector`
+- `mass matrix（质量矩阵）`
+- `Coriolis（科里奥利项）`
+- `gravity vector（重力向量）`
 
 ## 一句话定义
 
-- `mass matrix`：描述关节惯性耦合的对称正定矩阵。
-- `Coriolis`：速度耦合引起的惯性项总称。
-- `gravity vector`：重力项在关节空间的等效力矩向量。
+- `mass matrix（质量矩阵）`：描述关节惯性耦合的对称正定矩阵。
+- `Coriolis（科里奥利项）`：速度耦合引起的惯性项总称。
+- `gravity vector（重力向量）`：重力项在关节空间的等效力矩向量。
 
 ## 关键关系/公式（记忆版）
 

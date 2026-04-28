@@ -16,11 +16,11 @@
 
 ## 本章最重要 5 个术语
 
-- `feedback`：利用测量误差实时修正控制输入。
-- `error dynamics`：误差随时间演化的动力学方程。
-- `computed torque`：用动力学前馈补偿的轨迹跟踪控制。
-- `hybrid control`：受约束方向力控、自由方向位控的组合。
-- `impedance control`：设定力-位移动态关系的交互控制。
+- `feedback（反馈）`：利用测量误差实时修正控制输入。
+- `error dynamics（误差动力学）`：误差随时间演化的动力学方程。
+- `computed torque（计算力矩控制）`：用动力学前馈补偿的轨迹跟踪控制。
+- `hybrid control（混合控制）`：受约束方向力控、自由方向位控的组合。
+- `impedance control（阻抗控制）`：设定力-位移动态关系的交互控制。
 
 ## 本章易错点
 

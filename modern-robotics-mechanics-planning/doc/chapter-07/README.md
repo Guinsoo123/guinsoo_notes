@@ -13,11 +13,11 @@
 
 ## 本章最重要 5 个术语
 
-- `closed chain`：存在回路约束的机构拓扑。
-- `parallel mechanism`：多个支链并联支撑同一动平台的机构。
-- `constraint Jacobian`：约束方程对速度变量的一阶线性化。
-- `Stewart platform`：典型6自由度并联平台机构。
-- `singularity`：雅可比降秩导致运动/受力能力退化的状态。
+- `closed chain（闭链）`：存在回路约束的机构拓扑。
+- `parallel mechanism（并联机构）`：多个支链并联支撑同一动平台的机构。
+- `constraint Jacobian（约束雅可比）`：约束方程对速度变量的一阶线性化。
+- `Stewart platform（Stewart平台）`：典型6自由度并联平台机构。
+- `singularity（奇异性）`：雅可比降秩导致运动/受力能力退化的状态。
 
 ## 本章易错点
 

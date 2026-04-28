@@ -13,11 +13,11 @@
 
 ## 本章最重要 5 个术语
 
-- `contact`：本章关键概念。
-- `form closure`：纯几何约束实现全向运动封闭。
-- `force closure`：通过接触力可平衡任意外载荷。
-- `friction cone`：摩擦力允许方向形成的锥集。
-- `wrench space`：所有可实现广义力构成的空间。
+- `contact（接触）`：本章关键概念。
+- `form closure（形封闭）`：纯几何约束实现全向运动封闭。
+- `force closure（力封闭）`：通过接触力可平衡任意外载荷。
+- `friction cone（摩擦锥）`：摩擦力允许方向形成的锥集。
+- `wrench space（力旋量空间）`：所有可实现广义力构成的空间。
 
 ## 本章易错点
 

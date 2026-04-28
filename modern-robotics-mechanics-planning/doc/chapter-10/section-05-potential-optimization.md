@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `potential field`
-- `local minima`
-- `nonlinear optimization`
+- `potential field（势场法）`
+- `local minima（局部极小）`
+- `nonlinear optimization（非线性优化）`
 
 ## 一句话定义
 
-- `potential field`：通过势能梯度生成导航方向。
-- `local minima`：势场法常见陷阱，导致搜索停滞。
-- `nonlinear optimization`：把路径问题转为约束优化求解。
+- `potential field（势场法）`：通过势能梯度生成导航方向。
+- `local minima（局部极小）`：势场法常见陷阱，导致搜索停滞。
+- `nonlinear optimization（非线性优化）`：把路径问题转为约束优化求解。
 
 ## 关键关系/公式（记忆版）
 

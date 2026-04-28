@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `SO(3)`
-- `rotation matrix`
-- `angular velocity`
+- `SO(3)（三维旋转群）`
+- `rotation matrix（旋转矩阵）`
+- `angular velocity（角速度）`
 
 ## 一句话定义
 
-- `SO(3)`：三维旋转矩阵构成的李群。
-- `rotation matrix`：满足正交与行列式为1的旋转表示矩阵。
-- `angular velocity`：单位时间内旋转变化率向量。
+- `SO(3)（三维旋转群）`：三维旋转矩阵构成的李群。
+- `rotation matrix（旋转矩阵）`：满足正交与行列式为1的旋转表示矩阵。
+- `angular velocity（角速度）`：单位时间内旋转变化率向量。
 
 ## 关键关系/公式（记忆版）
 

@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `matrix exponential`
-- `exponential coordinates`
-- `log map`
+- `matrix exponential（矩阵指数）`
+- `exponential coordinates（指数坐标）`
+- `log map（对数映射）`
 
 ## 一句话定义
 
-- `matrix exponential`：把李代数元素映射到李群元素的运算。
-- `exponential coordinates`：用轴与标量参数表示旋转/位姿的方法。
-- `log map`：把群元素映射回李代数局部参数。
+- `matrix exponential（矩阵指数）`：把李代数元素映射到李群元素的运算。
+- `exponential coordinates（指数坐标）`：用轴与标量参数表示旋转/位姿的方法。
+- `log map（对数映射）`：把群元素映射回李代数局部参数。
 
 ## 关键关系/公式（记忆版）
 

@@ -2,17 +2,17 @@
 
 ## 核心术语
 
-- `joint`
-- `prismatic joint`
-- `revolute joint`
-- `Grubler formula`
+- `joint（关节）`
+- `prismatic joint（移动关节）`
+- `revolute joint（转动关节）`
+- `Grubler formula（古鲁伯勒公式）`
 
 ## 一句话定义
 
-- `joint`：连接连杆并允许相对运动的机构单元。
-- `prismatic joint`：沿固定轴线平移的关节。
-- `revolute joint`：绕固定轴线转动的关节。
-- `Grubler formula`：估算机构自由度的经典计数公式。
+- `joint（关节）`：连接连杆并允许相对运动的机构单元。
+- `prismatic joint（移动关节）`：沿固定轴线平移的关节。
+- `revolute joint（转动关节）`：绕固定轴线转动的关节。
+- `Grubler formula（古鲁伯勒公式）`：估算机构自由度的经典计数公式。
 
 ## 关键关系/公式（记忆版）
 

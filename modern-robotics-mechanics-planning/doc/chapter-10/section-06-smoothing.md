@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `smoothing`
-- `shortcut`
-- `post-processing`
+- `smoothing（平滑化）`
+- `shortcut（捷径平滑）`
+- `post-processing（后处理）`
 
 ## 一句话定义
 
-- `smoothing`：对初始路径做后处理提升可执行性。
-- `shortcut`：随机尝试替换路径段以缩短路径。
-- `post-processing`：规划后重整时间和曲率等步骤。
+- `smoothing（平滑化）`：对初始路径做后处理提升可执行性。
+- `shortcut（捷径平滑）`：随机尝试替换路径段以缩短路径。
+- `post-processing（后处理）`：规划后重整时间和曲率等步骤。
 
 ## 关键关系/公式（记忆版）
 

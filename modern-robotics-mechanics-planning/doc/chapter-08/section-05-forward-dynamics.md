@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `forward dynamics`
-- `acceleration solve`
-- `simulation`
+- `forward dynamics（正动力学）`
+- `acceleration solve（加速度求解）`
+- `simulation（仿真）`
 
 ## 一句话定义
 
-- `forward dynamics`：由力矩求加速度的问题。
-- `acceleration solve`：求解系统关节加速度的步骤。
-- `simulation`：按动力学方程进行时域数值积分。
+- `forward dynamics（正动力学）`：由力矩求加速度的问题。
+- `acceleration solve（加速度求解）`：求解系统关节加速度的步骤。
+- `simulation（仿真）`：按动力学方程进行时域数值积分。
 
 ## 关键关系/公式（记忆版）
 

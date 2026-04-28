@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `spatial inertia`
-- `Newton-Euler`
-- `twist-wrench`
+- `spatial inertia（空间惯量）`
+- `Newton-Euler（牛顿-欧拉法）`
+- `twist-wrench（旋量-力旋量）`
 
 ## 一句话定义
 
-- `spatial inertia`：在六维twist-wrench空间的惯性表示。
-- `Newton-Euler`：基于动量与力矩平衡的动力学建模方法。
-- `twist-wrench`：用6维运动量与受力量统一表述动力学。
+- `spatial inertia（空间惯量）`：在六维twist-wrench空间的惯性表示。
+- `Newton-Euler（牛顿-欧拉法）`：基于动量与力矩平衡的动力学建模方法。
+- `twist-wrench（旋量-力旋量）`：用6维运动量与受力量统一表述动力学。
 
 ## 关键关系/公式（记忆版）
 

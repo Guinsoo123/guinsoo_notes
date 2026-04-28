@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `Newton-Raphson`
-- `iterative IK`
-- `convergence`
+- `Newton-Raphson（牛顿-拉夫森法）`
+- `iterative IK（迭代逆运动学）`
+- `convergence（收敛性）`
 
 ## 一句话定义
 
-- `Newton-Raphson`：利用一阶线性化迭代求根的算法。
-- `iterative IK`：通过迭代逐步逼近目标位姿的逆解法。
-- `convergence`：迭代序列收敛到目标解的性质。
+- `Newton-Raphson（牛顿-拉夫森法）`：利用一阶线性化迭代求根的算法。
+- `iterative IK（迭代逆运动学）`：通过迭代逐步逼近目标位姿的逆解法。
+- `convergence（收敛性）`：迭代序列收敛到目标解的性质。
 
 ## 关键关系/公式（记忆版）
 

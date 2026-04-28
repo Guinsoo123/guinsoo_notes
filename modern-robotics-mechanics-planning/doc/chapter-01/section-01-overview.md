@@ -2,19 +2,19 @@
 
 ## 核心术语
 
-- `robotics`
-- `modeling`
-- `planning`
-- `control`
-- `manipulation`
+- `robotics（机器人学）`
+- `modeling（建模）`
+- `planning（规划）`
+- `control（控制）`
+- `manipulation（操作）`
 
 ## 一句话定义
 
-- `robotics`：研究感知、规划、控制与执行一体化系统的学科。
-- `modeling`：把物理系统抽象为数学关系用于分析和计算。
-- `planning`：在约束下搜索从初态到目标态的可行策略。
-- `control`：通过反馈调节输入，使系统稳定追踪目标。
-- `manipulation`：通过接触与受力改变物体状态的过程。
+- `robotics（机器人学）`：研究感知、规划、控制与执行一体化系统的学科。
+- `modeling（建模）`：把物理系统抽象为数学关系用于分析和计算。
+- `planning（规划）`：在约束下搜索从初态到目标态的可行策略。
+- `control（控制）`：通过反馈调节输入，使系统稳定追踪目标。
+- `manipulation（操作）`：通过接触与受力改变物体状态的过程。
 
 ## 关键关系/公式（记忆版）
 

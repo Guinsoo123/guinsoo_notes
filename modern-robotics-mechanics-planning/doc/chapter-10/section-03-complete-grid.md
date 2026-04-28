@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `complete planner`
-- `grid`
-- `resolution completeness`
+- `complete planner（完备规划器）`
+- `grid（栅格）`
+- `resolution completeness（分辨率完备性）`
 
 ## 一句话定义
 
-- `complete planner`：理论上完备的规划方法。
-- `grid`：将空间离散化为网格单元。
-- `resolution completeness`：分辨率足够细时可找到解的性质。
+- `complete planner（完备规划器）`：理论上完备的规划方法。
+- `grid（栅格）`：将空间离散化为网格单元。
+- `resolution completeness（分辨率完备性）`：分辨率足够细时可找到解的性质。
 
 ## 关键关系/公式（记忆版）
 

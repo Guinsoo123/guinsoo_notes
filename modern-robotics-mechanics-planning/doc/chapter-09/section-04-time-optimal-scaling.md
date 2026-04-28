@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `phase plane`
-- `bang-bang`
-- `feasible cone`
+- `phase plane（相平面）`
+- `bang-bang（开关控制）`
+- `feasible cone（可行锥）`
 
 ## 一句话定义
 
-- `phase plane`：以(s,s_dot)分析时间标定可行域的平面。
-- `bang-bang`：控制量在上下界间切换的最优策略。
-- `feasible cone`：相平面中满足约束的速度加速度锥域。
+- `phase plane（相平面）`：以(s,s_dot)分析时间标定可行域的平面。
+- `bang-bang（开关控制）`：控制量在上下界间切换的最优策略。
+- `feasible cone（可行锥）`：相平面中满足约束的速度加速度锥域。
 
 ## 关键关系/公式（记忆版）
 

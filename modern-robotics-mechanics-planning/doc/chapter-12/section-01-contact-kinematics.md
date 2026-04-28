@@ -2,17 +2,17 @@
 
 ## 核心术语
 
-- `contact kinematics`
-- `rolling`
-- `sliding`
-- `form closure`
+- `contact kinematics（接触运动学）`
+- `rolling（滚动）`
+- `sliding（滑动）`
+- `form closure（形封闭）`
 
 ## 一句话定义
 
-- `contact kinematics`：接触点处速度与约束关系。
-- `rolling`：接触点相对速度为零的滚动接触。
-- `sliding`：接触点存在切向相对速度。
-- `form closure`：纯几何约束实现全向运动封闭。
+- `contact kinematics（接触运动学）`：接触点处速度与约束关系。
+- `rolling（滚动）`：接触点相对速度为零的滚动接触。
+- `sliding（滑动）`：接触点存在切向相对速度。
+- `form closure（形封闭）`：纯几何约束实现全向运动封闭。
 
 ## 关键关系/公式（记忆版）
 

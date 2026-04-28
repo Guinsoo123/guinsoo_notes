@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `constraint Jacobian`
-- `platform velocity`
-- `actuator velocity`
+- `constraint Jacobian（约束雅可比）`
+- `platform velocity（平台速度）`
+- `actuator velocity（执行器速度）`
 
 ## 一句话定义
 
-- `constraint Jacobian`：约束方程对速度变量的一阶线性化。
-- `platform velocity`：并联机构动平台速度。
-- `actuator velocity`：执行器速度输入向量。
+- `constraint Jacobian（约束雅可比）`：约束方程对速度变量的一阶线性化。
+- `platform velocity（平台速度）`：并联机构动平台速度。
+- `actuator velocity（执行器速度）`：执行器速度输入向量。
 
 ## 关键关系/公式（记忆版）
 

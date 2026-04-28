@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `constraint force`
-- `Lagrange multiplier`
-- `projection`
+- `constraint force（约束力）`
+- `Lagrange multiplier（拉格朗日乘子）`
+- `projection（投影方法）`
 
 ## 一句话定义
 
-- `constraint force`：由约束产生的反作用力。
-- `Lagrange multiplier`：处理约束动力学的乘子变量。
-- `projection`：将动力学投影到可行子空间的操作。
+- `constraint force（约束力）`：由约束产生的反作用力。
+- `Lagrange multiplier（拉格朗日乘子）`：处理约束动力学的乘子变量。
+- `projection（投影方法）`：将动力学投影到可行子空间的操作。
 
 ## 关键关系/公式（记忆版）
 

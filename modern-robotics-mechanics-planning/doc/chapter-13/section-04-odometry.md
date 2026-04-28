@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `odometry`
-- `integration drift`
-- `sensor fusion`
+- `odometry（里程计）`
+- `integration drift（积分漂移）`
+- `sensor fusion（传感器融合）`
 
 ## 一句话定义
 
-- `odometry`：由轮编码器积分估计位姿的方法。
-- `integration drift`：积分误差累积导致估计漂移。
-- `sensor fusion`：融合多传感器提升估计稳定性。
+- `odometry（里程计）`：由轮编码器积分估计位姿的方法。
+- `integration drift（积分漂移）`：积分误差累积导致估计漂移。
+- `sensor fusion（传感器融合）`：融合多传感器提升估计稳定性。
 
 ## 关键关系/公式（记忆版）
 

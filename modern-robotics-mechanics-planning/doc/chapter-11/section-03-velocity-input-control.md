@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `PI control`
-- `kinematic control`
-- `task-space control`
+- `PI control（PI控制）`
+- `kinematic control（运动学控制）`
+- `task-space control（任务空间控制）`
 
 ## 一句话定义
 
-- `PI control`：比例积分控制器，改善稳态误差。
-- `kinematic control`：基于运动学模型的控制策略。
-- `task-space control`：直接在末端任务变量上设计控制律。
+- `PI control（PI控制）`：比例积分控制器，改善稳态误差。
+- `kinematic control（运动学控制）`：基于运动学模型的控制策略。
+- `task-space control（任务空间控制）`：直接在末端任务变量上设计控制律。
 
 ## 关键关系/公式（记忆版）
 

@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `singularity`
-- `rank deficiency`
-- `null space`
+- `singularity（奇异性）`
+- `rank deficiency（秩亏）`
+- `null space（零空间）`
 
 ## 一句话定义
 
-- `singularity`：雅可比降秩导致运动/受力能力退化的状态。
-- `rank deficiency`：矩阵秩低于满秩的性质。
-- `null space`：线性映射输出为零的输入子空间。
+- `singularity（奇异性）`：雅可比降秩导致运动/受力能力退化的状态。
+- `rank deficiency（秩亏）`：矩阵秩低于满秩的性质。
+- `null space（零空间）`：线性映射输出为零的输入子空间。
 
 ## 关键关系/公式（记忆版）
 

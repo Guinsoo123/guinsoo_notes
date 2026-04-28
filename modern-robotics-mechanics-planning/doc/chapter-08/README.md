@@ -18,11 +18,11 @@
 
 ## 本章最重要 5 个术语
 
-- `mass matrix`：描述关节惯性耦合的对称正定矩阵。
-- `inverse dynamics`：由运动求驱动力矩的问题。
-- `forward dynamics`：由力矩求加速度的问题。
-- `Coriolis`：速度耦合引起的惯性项总称。
-- `friction model`：描述粘滞、库伦等摩擦效应的模型。
+- `mass matrix（质量矩阵）`：描述关节惯性耦合的对称正定矩阵。
+- `inverse dynamics（逆动力学）`：由运动求驱动力矩的问题。
+- `forward dynamics（正动力学）`：由力矩求加速度的问题。
+- `Coriolis（科里奥利项）`：速度耦合引起的惯性项总称。
+- `friction model（摩擦模型）`：描述粘滞、库伦等摩擦效应的模型。
 
 ## 本章易错点
 

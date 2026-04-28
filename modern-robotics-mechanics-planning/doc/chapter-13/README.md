@@ -15,11 +15,11 @@
 
 ## 本章最重要 5 个术语
 
-- `WMR`：wheeled mobile robot，轮式移动机器人。
-- `nonholonomic`：仅体现为速度约束且一般不可积分为位置约束。
-- `controllability`：系统是否可由输入到达目标状态。
-- `odometry`：由轮编码器积分估计位姿的方法。
-- `mobile manipulation`：移动底盘与机械臂协同操作。
+- `WMR（轮式移动机器人）`：wheeled mobile robot，轮式移动机器人。
+- `nonholonomic（非完整约束）`：仅体现为速度约束且一般不可积分为位置约束。
+- `controllability（可控性）`：系统是否可由输入到达目标状态。
+- `odometry（里程计）`：由轮编码器积分估计位姿的方法。
+- `mobile manipulation（移动操作）`：移动底盘与机械臂协同操作。
 
 ## 本章易错点
 

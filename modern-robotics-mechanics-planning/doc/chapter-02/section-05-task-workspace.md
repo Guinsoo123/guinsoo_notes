@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `task space`
-- `workspace`
-- `reachable workspace`
+- `task space（任务空间）`
+- `workspace（工作空间）`
+- `reachable workspace（可达工作空间）`
 
 ## 一句话定义
 
-- `task space`：任务变量所在空间，如末端位姿空间。
-- `workspace`：末端在物理空间可达的区域。
-- `reachable workspace`：忽略姿态后末端点可到达的集合。
+- `task space（任务空间）`：任务变量所在空间，如末端位姿空间。
+- `workspace（工作空间）`：末端在物理空间可达的区域。
+- `reachable workspace（可达工作空间）`：忽略姿态后末端点可到达的集合。
 
 ## 关键关系/公式（记忆版）
 

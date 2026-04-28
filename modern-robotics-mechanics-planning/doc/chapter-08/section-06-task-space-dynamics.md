@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `operational space`
-- `effective inertia`
-- `task wrench`
+- `operational space（操作空间）`
+- `effective inertia（等效惯量）`
+- `task wrench（任务力旋量）`
 
 ## 一句话定义
 
-- `operational space`：以任务变量定义的控制/动力学空间。
-- `effective inertia`：任务空间方向上的等效惯性。
-- `task wrench`：作用于任务变量的广义力。
+- `operational space（操作空间）`：以任务变量定义的控制/动力学空间。
+- `effective inertia（等效惯量）`：任务空间方向上的等效惯性。
+- `task wrench（任务力旋量）`：作用于任务变量的广义力。
 
 ## 关键关系/公式（记忆版）
 

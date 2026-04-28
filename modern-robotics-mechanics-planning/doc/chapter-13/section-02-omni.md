@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `omnidirectional`
-- `kinematics mapping`
-- `holonomic`
+- `omnidirectional（全向运动）`
+- `kinematics mapping（运动学映射）`
+- `holonomic（完整约束）`
 
 ## 一句话定义
 
-- `omnidirectional`：可在平面任意方向瞬时运动。
-- `kinematics mapping`：轮速与车体速度之间映射。
-- `holonomic`：可积分为位置约束的约束类型。
+- `omnidirectional（全向运动）`：可在平面任意方向瞬时运动。
+- `kinematics mapping（运动学映射）`：轮速与车体速度之间映射。
+- `holonomic（完整约束）`：可积分为位置约束的约束类型。
 
 ## 关键关系/公式（记忆版）
 

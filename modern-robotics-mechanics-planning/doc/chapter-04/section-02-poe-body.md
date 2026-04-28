@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `body frame`
-- `body screw axis`
-- `M matrix`
+- `body frame（本体坐标系）`
+- `body screw axis（本体螺旋轴）`
+- `M matrix（初始位姿矩阵）`
 
 ## 一句话定义
 
-- `body frame`：固定在末端执行器上的参考坐标系。
-- `body screw axis`：在本体坐标系表达的关节螺旋轴。
-- `M matrix`：零位姿下末端相对基座的齐次变换。
+- `body frame（本体坐标系）`：固定在末端执行器上的参考坐标系。
+- `body screw axis（本体螺旋轴）`：在本体坐标系表达的关节螺旋轴。
+- `M matrix（初始位姿矩阵）`：零位姿下末端相对基座的齐次变换。
 
 ## 关键关系/公式（记忆版）
 

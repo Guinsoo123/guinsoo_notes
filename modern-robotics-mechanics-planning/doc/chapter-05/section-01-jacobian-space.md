@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `Jacobian`
-- `space Jacobian`
-- `joint velocity`
+- `Jacobian（雅可比矩阵）`
+- `space Jacobian（空间雅可比）`
+- `joint velocity（关节速度）`
 
 ## 一句话定义
 
-- `Jacobian`：关节速度到末端速度的线性映射。
-- `space Jacobian`：在空间坐标系下表达的雅可比。
-- `joint velocity`：关节变量对时间的一阶导。
+- `Jacobian（雅可比矩阵）`：关节速度到末端速度的线性映射。
+- `space Jacobian（空间雅可比）`：在空间坐标系下表达的雅可比。
+- `joint velocity（关节速度）`：关节变量对时间的一阶导。
 
 ## 关键关系/公式（记忆版）
 

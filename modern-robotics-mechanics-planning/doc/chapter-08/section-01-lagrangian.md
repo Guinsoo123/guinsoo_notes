@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `Lagrangian`
-- `kinetic energy`
-- `potential energy`
+- `Lagrangian（拉格朗日量）`
+- `kinetic energy（动能）`
+- `potential energy（势能）`
 
 ## 一句话定义
 
-- `Lagrangian`：动能减势能构成的动力学标量函数。
-- `kinetic energy`：系统因速度产生的能量。
-- `potential energy`：系统因位置/场产生的储能。
+- `Lagrangian（拉格朗日量）`：动能减势能构成的动力学标量函数。
+- `kinetic energy（动能）`：系统因速度产生的能量。
+- `potential energy（势能）`：系统因位置/场产生的储能。
 
 ## 关键关系/公式（记忆版）
 

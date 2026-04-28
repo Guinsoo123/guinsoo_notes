@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `regrasp`
-- `in-hand manipulation`
-- `fixture`
+- `regrasp（重抓取）`
+- `in-hand manipulation（手内操作）`
+- `fixture（夹具辅助）`
 
 ## 一句话定义
 
-- `regrasp`：通过重新抓取改变操作可达性的策略。
-- `in-hand manipulation`：物体在手内通过接触重排完成操作。
-- `fixture`：利用环境约束辅助定位或操作。
+- `regrasp（重抓取）`：通过重新抓取改变操作可达性的策略。
+- `in-hand manipulation（手内操作）`：物体在手内通过接触重排完成操作。
+- `fixture（夹具辅助）`：利用环境约束辅助定位或操作。
 
 ## 关键关系/公式（记忆版）
 

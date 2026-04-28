@@ -2,17 +2,17 @@
 
 ## 核心术语
 
-- `force control`
-- `hybrid control`
-- `impedance control`
-- `admittance`
+- `force control（力控制）`
+- `hybrid control（混合控制）`
+- `impedance control（阻抗控制）`
+- `admittance（导纳控制）`
 
 ## 一句话定义
 
-- `force control`：直接调节接触力/力矩的控制。
-- `hybrid control`：受约束方向力控、自由方向位控的组合。
-- `impedance control`：设定力-位移动态关系的交互控制。
-- `admittance`：将外力映射为期望运动的控制形式。
+- `force control（力控制）`：直接调节接触力/力矩的控制。
+- `hybrid control（混合控制）`：受约束方向力控、自由方向位控的组合。
+- `impedance control（阻抗控制）`：设定力-位移动态关系的交互控制。
+- `admittance（导纳控制）`：将外力映射为期望运动的控制形式。
 
 ## 关键关系/公式（记忆版）
 

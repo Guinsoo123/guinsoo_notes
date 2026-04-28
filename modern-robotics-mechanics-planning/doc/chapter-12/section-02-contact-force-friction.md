@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `friction cone`
-- `force closure`
-- `wrench space`
+- `friction cone（摩擦锥）`
+- `force closure（力封闭）`
+- `wrench space（力旋量空间）`
 
 ## 一句话定义
 
-- `friction cone`：摩擦力允许方向形成的锥集。
-- `force closure`：通过接触力可平衡任意外载荷。
-- `wrench space`：所有可实现广义力构成的空间。
+- `friction cone（摩擦锥）`：摩擦力允许方向形成的锥集。
+- `force closure（力封闭）`：通过接触力可平衡任意外载荷。
+- `wrench space（力旋量空间）`：所有可实现广义力构成的空间。
 
 ## 关键关系/公式（记忆版）
 

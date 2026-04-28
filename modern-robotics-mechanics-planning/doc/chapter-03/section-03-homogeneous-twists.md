@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `homogeneous transform`
-- `twist`
-- `screw axis`
+- `homogeneous transform（齐次变换）`
+- `twist（速度旋量）`
+- `screw axis（螺旋轴）`
 
 ## 一句话定义
 
-- `homogeneous transform`：统一表达旋转和平移的4x4矩阵。
-- `twist`：刚体瞬时速度的6维表示。
-- `screw axis`：同时描述旋转轴和沿轴平移特性的轴线。
+- `homogeneous transform（齐次变换）`：统一表达旋转和平移的4x4矩阵。
+- `twist（速度旋量）`：刚体瞬时速度的6维表示。
+- `screw axis（螺旋轴）`：同时描述旋转轴和沿轴平移特性的轴线。
 
 ## 关键关系/公式（记忆版）
 

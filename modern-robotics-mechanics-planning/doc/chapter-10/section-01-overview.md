@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `motion planning`
-- `completeness`
-- `optimality`
+- `motion planning（运动规划）`
+- `completeness（完备性）`
+- `optimality（最优性）`
 
 ## 一句话定义
 
-- `motion planning`：在障碍和约束下寻找无碰路径。
-- `completeness`：算法找到解或证明无解的能力。
-- `optimality`：解在长度、时间、能耗等指标上的优劣。
+- `motion planning（运动规划）`：在障碍和约束下寻找无碰路径。
+- `completeness（完备性）`：算法找到解或证明无解的能力。
+- `optimality（最优性）`：解在长度、时间、能耗等指标上的优劣。
 
 ## 关键关系/公式（记忆版）
 

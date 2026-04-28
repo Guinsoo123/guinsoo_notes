@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `WMR`
-- `differential drive`
-- `Ackermann`
+- `WMR（轮式移动机器人）`
+- `differential drive（差速驱动）`
+- `Ackermann（阿克曼转向）`
 
 ## 一句话定义
 
-- `WMR`：wheeled mobile robot，轮式移动机器人。
-- `differential drive`：两侧轮速差实现转向的底盘形式。
-- `Ackermann`：汽车式转向几何模型。
+- `WMR（轮式移动机器人）`：wheeled mobile robot，轮式移动机器人。
+- `differential drive（差速驱动）`：两侧轮速差实现转向的底盘形式。
+- `Ackermann（阿克曼转向）`：汽车式转向几何模型。
 
 ## 关键关系/公式（记忆版）
 

@@ -2,15 +2,15 @@
 
 ## 核心术语
 
-- `via point`
-- `spline`
-- `continuity`
+- `via point（经由点）`
+- `spline（样条曲线）`
+- `continuity（连续性）`
 
 ## 一句话定义
 
-- `via point`：轨迹必须经过的中间关键点。
-- `spline`：分段多项式并保持连接处连续。
-- `continuity`：位置/速度/加速度在拼接点的连续阶数。
+- `via point（经由点）`：轨迹必须经过的中间关键点。
+- `spline（样条曲线）`：分段多项式并保持连接处连续。
+- `continuity（连续性）`：位置/速度/加速度在拼接点的连续阶数。
 
 ## 关键关系/公式（记忆版）
 
