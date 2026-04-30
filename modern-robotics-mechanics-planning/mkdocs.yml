@@ -16,11 +16,12 @@ markdown_extensions:
   - tables
   - toc:
       permalink: true
-  - pymdownx.superfences
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.superfences
 
 extra_javascript:
+  - javascripts/mathjax-config.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
@@ -28,7 +29,14 @@ nav:
   - 全书总览: overview.md
   - 全书术语总表: glossary/README.md
   - 章节目录:
-      - 数学先修指南（刚体运动）: math-prerequisites.md
+      - 数学先修指南（刚体运动）:
+          - 章节总览: math-prerequisites/README.md
+          - 线性代数基础卡片: math-prerequisites/section-01-linear-algebra.md
+          - 微积分与ODE卡片: math-prerequisites/section-02-calculus-ode.md
+          - 李群与刚体运动卡片: math-prerequisites/section-03-lie-groups-rigid-motion.md
+          - 经典教程与30天计划: math-prerequisites/section-04-resources-and-plan.md
+          - 自测与考前复盘: math-prerequisites/section-05-self-check.md
+      - 数学先修速查（考前5分钟）: math-prerequisites-cheatsheet.md
       - chapter-01 Preview（全书预览）:
           - 章节总览: chapter-01/README.md
           - 术语速查: chapter-01/terms.md

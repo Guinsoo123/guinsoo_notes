@@ -4,14 +4,16 @@
 
 ## 学习建议
 
-- 若即将学习刚体运动、旋量与雅可比，建议先读 [数学先修指南（刚体运动）](./math-prerequisites.md)。
+- 若即将学习刚体运动、旋量与雅可比，建议先读 [数学先修指南（刚体运动）](./math-prerequisites/README.md)。
+- 需要考试/推导前快速回看时，优先看 [数学先修速查（考前 5 分钟）](./math-prerequisites-cheatsheet.md)。
 - 先读章节 `README.md` 建立知识地图。
 - 再按 `section-*.md` 学术语与概念关系。
 - 最后看 `terms.md` 和 `glossary/README.md` 做快速回顾。
 
 ## 章节索引
 
-- [数学先修指南（刚体运动）](./math-prerequisites.md)（章节目录第一项）
+- [数学先修指南（刚体运动）](./math-prerequisites/README.md)（章节目录第一项）
+- [数学先修速查（考前 5 分钟）](./math-prerequisites-cheatsheet.md)
 
 - [chapter-01 Preview（全书预览）](./chapter-01/README.md)
 - [chapter-02 Configuration Space（构型空间）](./chapter-02/README.md)
