@@ -28,6 +28,7 @@ nav:
   - 全书总览: overview.md
   - 全书术语总表: glossary/README.md
   - 章节目录:
+      - 数学先修指南（刚体运动）: math-prerequisites.md
       - chapter-01 Preview（全书预览）:
           - 章节总览: chapter-01/README.md
           - 术语速查: chapter-01/terms.md
