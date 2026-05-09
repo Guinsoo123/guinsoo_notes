@@ -252,6 +252,33 @@ python example/scripts/trajectory_plot_demo.py
 
 ---
 
+### trajectory_3d_viz.py
+
+```bash
+# Matplotlib 静态可视化（默认）
+python example/scripts/trajectory_3d_viz.py
+
+# Rerun 交互式可视化（可播放时间轴）
+python example/scripts/trajectory_3d_viz.py --rerun
+```
+
+在三维空间中生成一段 **Lemniscate（∞ 字形）叠加垂直振荡**的参数化轨迹，模拟机器人末端执行器的 Cartesian 规划路径，并在两种后端中可视化：
+
+**Matplotlib 模式**（默认）弹出三张子图：
+
+- 左：三维空间路径 + 起点/终点标记 + 速度方向箭头（橙色），直观展示路径形状和运动方向
+- 中：x(t)、y(t)、z(t) 位置时序曲线，对应轨迹跟踪中的参考信号
+- 右：vx(t)、vy(t)、vz(t) 速度时序曲线及合速度 |v|(t)，用于检查速度连续性和峰值
+
+**Rerun 模式**（`--rerun`）在交互式 Viewer 中展示：
+
+- `world/path`：整条路径折线
+- `world/end_effector`：随时间轴变化的 SE(3) 末端位姿（红/绿/蓝三轴箭头代表局部坐标系三个轴方向）
+
+拖动时间轴可播放末端执行器沿轨迹移动的动画，完整模拟「规划轨迹 + 末端位姿」在运控调试中的可视化需求。
+
+---
+
 ## 5. 常见问题
 
 ### `ModuleNotFoundError: No module named 'rerun'`
